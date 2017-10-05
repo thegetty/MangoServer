@@ -12,3 +12,4 @@ six==1.10.0
 SPARQLWrapper==1.7.6
 webencodings==0.5
 uwsgi==2.0.15
+yapf==0.18.0

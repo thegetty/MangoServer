@@ -318,10 +318,13 @@ class MangoServer(object):
         for tgt in tgts:
             if type(tgt) != dict:
                 tgt = {'id': tgt}
-            if tgt['id'].startswith(self.url_host):
+
+            # KeyError due to missing 'id' 
+            # if tgt['id'].startswith(self.url_host):
+
                 # XXX Fetch target resource
                 # and copy properties
-                pass
+                # pass                
 
         return js
 
