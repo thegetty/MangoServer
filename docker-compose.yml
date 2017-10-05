@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mongodb:
+    image: mongo:3.4.9
+    volumes:
+      - "./annosdb:/data/db"
+  mango:
+    image: mango:v0.1.0
+    expose:
+      - "8080"
+    volumes:
+      - .:/code
+    depends_on:
+      - mongodb
+    command: python mangoserver.py --mongodb-host mongodb
