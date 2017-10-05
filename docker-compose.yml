@@ -12,4 +12,4 @@ services:
       - .:/code
     depends_on:
       - mongodb
-    command: python mangoserver.py --mongodb-host mongodb
+    command: ['uwsgi', 'mango.ini']
