@@ -177,7 +177,7 @@ class MangoServer(object):
         self.key_order_hash['contains'] = 5001
 
     def _connect(self, database, host=None, port=None):
-        return MongoClient(host=host, port=port)[database]
+        return MongoClient(host=host, port=port, connect=False)[database]
 
     def _collection(self, container):
         if not self.connection:
